@@ -317,8 +317,9 @@ function codeHistory(){};
 // copy HTML
 function copy(id, thisdom)
 {
-    navigator.clipboard.writeText(document.getElementById(id).innerHTML.replace(/<br>/g, '\n').replace(/<[^>]*>/g, ''))
-    .then(() => {
+    navigator.clipboard.writeText(
+        document.getElementById(id).innerText
+    ).then(() => {
         thisdom.innerHTML = "&ensp;Copied! ";
     })
     .catch(err => {
