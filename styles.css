@@ -1,0 +1,222 @@
+html {
+    font-family: monospace;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+body {
+    margin: 0;
+    overflow: auto;
+    background-color: #0276FD;
+}
+center {
+    padding: 0px;
+    margin: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+button {
+    cursor: pointer;
+    outline: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+/* width of scrollbar */
+::-webkit-scrollbar {
+    width: 0;
+}
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                          supported by Chrome, Edge, Opera and Firefox */
+}
+#div_term {
+    margin: auto;
+    margin-top: 5%;
+    width: 90%;
+    height: calc(100vh - 109px);
+    padding: 5px;
+    border: transparent;
+    border-radius: 14px;
+    color: gray;
+    background-color: #222;
+    display: flex;
+    overflow: auto;
+    flex-direction: column;
+    font-size: 1.1rem;
+    // display: none;
+}
+#wrapper_console {
+    width: 97%;
+    height: 45%;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 11.2px;
+}
+#console {
+    width: 95.5%;
+    height: 100%;
+    margin: auto;
+    margin-top: 11.2px;
+    margin-bottom: 11.2px;
+    padding: 7px;
+    border: transparent;
+    border-left: 2.8px solid gray;
+    color: #eee;
+    background-color: #333;
+    font-size: 0.8rem;
+    outline: none;
+    text-decoration: none !important;
+    white-space: pre;
+    overflow: auto;
+}
+/* width */
+#console::-webkit-scrollbar {
+    width: 7px;
+}
+/* Track */
+#console::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+/* Handle */
+#console::-webkit-scrollbar-thumb {
+    background: #555;
+}
+/* Handle on hover */
+#console::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+#wrapper_term {
+    width: 97%;
+    height: 35%;
+    margin: auto;
+    margin-top: 40px;
+}
+#terminal {
+    width: 95.5%;
+    height: 100%;
+    margin: auto;
+    margin-top: 11.2px;
+    padding: 7px;
+    border: transparent;
+    border-left: 2.8px solid gray;
+    color: #eee;
+    background-color: #333;
+    font-size: 0.8rem;
+    outline: none;
+    text-decoration: none !important;
+    white-space: nowrap;
+    overflow: auto;
+}
+/* width */
+#terminal::-webkit-scrollbar {
+    width: 7px;
+}
+/* Track */
+#terminal::-webkit-scrollbar-track {
+    background: #2d2d2d;
+}
+/* Handle */
+#terminal::-webkit-scrollbar-thumb {
+    background: #555;
+}
+/* Handle on hover */
+#terminal::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+#btn_run {
+    width: 70px;
+    height: 42px;
+    position: fixed;
+    right: 5%;
+    bottom: 3.5%;
+    padding: 7px;
+    border: 2.8px solid #555;
+    border-radius: 7px;
+    color: #fff;
+    background-color: #555;
+    font-size: 1.3rem
+}
+#btn_run:active {
+    font-size: 1.1rem;
+}
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 2.8px;
+    z-index: -2;
+}
+.footer {
+    text-align: center;
+    color: #dedede;
+    font-size: 6px;
+}
+@media only screen and (orientation: landscape) {
+    #wrapper_term i.fa {
+        display: none;
+    }
+}
+/* zoom the login screen if device doesn't use the default
+ * 360px display width size
+ */
+@media only screen and (min-width: 400px) {
+    #div_prelogin {
+        zoom: 1.1;
+    }
+}
+@media only screen and (max-height: 480px) {
+    #div_prelogin {
+        top: 10px;
+        height: 80%;
+        overflow: auto;
+        padding-bottom: 20px;
+        display: block;
+    }
+    #headerRoot {
+        top: 15%;
+        width: auto;
+    }
+    .loginBox {
+        top: 30%;
+        height: auto;
+        width: 70%;
+    }
+    .input_text {
+        width: 85%;
+    }
+    #div_term {
+        height: 89vh;
+        overflow: auto;
+    }
+}
+@media only screen and (orientation: landscape) {
+    #div_term {
+        height: 80vh;
+        overflow: auto;
+    }
+}
+@media only screen and (orientation: landscape) and (min-width: 640px) {
+    #div_term {
+        margin-top: 2%;
+        flex-direction: row;
+        height: 90vh;
+    }
+    #wrapper_console {
+        margin-top: 5px;
+        width: 50%;
+        height: 90%;
+    }
+    #wrapper_term {
+        margin-top: 5px;
+        width: 48%;
+        height: 90%;
+    }
+}

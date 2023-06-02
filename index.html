@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="js, javascript, web, shell, cinex">
+    <meta name="description" content="Javascript web shell">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://cinexhome.web.app/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="https://cinexhome.web.app/favicon.ico"/>
+    <!-- font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>JS Shell</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- actions to perform before loading rest of the body -->
+    <script>
+        // this code colors the background of the website with a random value
+        let colors = [
+            "green",
+            "darkgreen",
+            "Tomato",
+            "Orange",
+            "DodgerBlue",
+            "MediumSeaGreen",
+            "#0276FD",
+            "SlateBlue",
+            "Violet",
+        ];
+        let colorNow = colors[Math.floor(Math.random() * colors.length)];
+        document.getElementsByTagName("body")[0].style.backgroundColor = colorNow;
+    </script>
+    <div id="div_term">
+        <div class="wrapper" id="wrapper_console">
+            <font class="noselect">Console</font>
+            <i class="fa fa-copy" id="clickForHelp" style="float: right;" aria-hidden="true" onclick="copy('console', this);"></i>
+            <div id="console"><font color="#7d7d7d">Output appears here</font></div>
+        </div>
+        <div class="wrapper" id="wrapper_term">
+            <font class="noselect">Terminal</font>
+            <i class="fa fa-arrow-down" id="clickForHelp" style="float: right; margin: auto 10px auto;" onclick="codeHistory(40)"></i>
+            <i class="fa fa-arrow-up" id="clickForHelp" style="float: right; margin: auto 10px auto;" onclick="codeHistory(38)"></i>
+            <textarea id="terminal" placeholder="Enter code here"></textarea>
+        </div>
+        <button id="btn_run">
+            Run
+        </button>
+        <script>
+            document.getElementById("btn_run").style.borderColor = colorNow;
+        </script>
+    </div>
+    <footer>
+        <div id="footer" class="footer">
+            Loading javascript...
+        </div>
+    </footer>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-database.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-analytics.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
